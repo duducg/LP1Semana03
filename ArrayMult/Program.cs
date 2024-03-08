@@ -6,9 +6,6 @@ namespace ArrayMult
     {
         static void Main(string[] args)
         {
-            //array mutliplier
-            //type is float
-            //array is taken from the "args" array
 
             //parse data:
             float[,] a = new float[2, 2]; //2x2 float array
@@ -45,21 +42,31 @@ namespace ArrayMult
                 }
             }
 
-            //print arrays
-            //To test if it works
-            //a
-            for (int i = 0; i < a.GetLength(0); i++)
+            // //print arrays
+            // //To test if it works
+            // //a
+            // for (int i = 0; i < a.GetLength(0); i++)
+            // {
+            //     for (int j = 0; j <a.GetLength(1); j++)
+            //     {
+            //         Console.Write(a[i, j] + " ");
+            //     }
+            //     Console.WriteLine();
+            // }
+            // //b
+            // for (int d = 0; d < b.Length; d++)
+            // {
+            //     Console.WriteLine(b[d] + " ");
+            // }
+
+            //final multiplied array:
+            float[] c = new float[2];
+            c[0] = (a[0, 0] * b[0]) + (a[0, 1] * b[1]);
+            c[1] = (a[1, 0] * b[0]) + (a[1, 1] * b[1]);
+            
+            for (int d = 0; d < c.Length; d++)
             {
-                for (int j = 0; j <a.GetLength(1); j++)
-                {
-                    Console.Write(a[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-            //b
-            for (int d = 0; d < b.Length; d++)
-            {
-                Console.Write(b[d] + " ");
+                Console.WriteLine(c[d] + " ");
             }
             
             
